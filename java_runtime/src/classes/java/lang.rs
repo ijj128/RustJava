@@ -26,6 +26,7 @@ mod no_such_method_error;
 mod null_pointer_exception;
 mod number_format_exception;
 mod object;
+mod out_of_memory_error;
 mod runnable;
 mod runtime;
 mod runtime_exception;
@@ -47,7 +48,7 @@ pub use self::{
     index_out_of_bounds_exception::IndexOutOfBoundsException, instantiation_error::InstantiationError, integer::Integer,
     interrupted_exception::InterruptedException, linkage_error::LinkageError, math::Math, negative_array_size_exception::NegativeArraySizeException,
     no_class_def_found_error::NoClassDefFoundError, no_such_field_error::NoSuchFieldError, no_such_method_error::NoSuchMethodError,
-    null_pointer_exception::NullPointerException, number_format_exception::NumberFormatException, object::Object, runnable::Runnable,
+    null_pointer_exception::NullPointerException, number_format_exception::NumberFormatException, object::Object, out_of_memory_error::OutOfMemoryError, runnable::Runnable,
     runtime::Runtime, runtime_exception::RuntimeException, security_exception::SecurityException, string::String, string_buffer::StringBuffer,
     string_index_out_of_bounds_exception::StringIndexOutOfBoundsException, system::System, thread::Thread, throwable::Throwable,
     unsupported_operation_exception::UnsupportedOperationException,

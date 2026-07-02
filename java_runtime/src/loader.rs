@@ -55,6 +55,7 @@ pub fn get_runtime_class_proto(name: &str) -> Option<RuntimeClassProto> {
         crate::classes::java::lang::Math::as_proto(),
         crate::classes::java::lang::NegativeArraySizeException::as_proto(),
         crate::classes::java::lang::NoClassDefFoundError::as_proto(),
+        crate::classes::java::lang::OutOfMemoryError::as_proto(),
         crate::classes::java::lang::NoSuchFieldError::as_proto(),
         crate::classes::java::lang::NoSuchMethodError::as_proto(),
         crate::classes::java::lang::NullPointerException::as_proto(),
