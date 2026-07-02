@@ -221,6 +221,9 @@ impl String {
     async fn compare_to(jvm: &Jvm, _: &mut RuntimeContext, this: ClassInstanceRef<Self>, other: ClassInstanceRef<Self>) -> Result<i32> {
         tracing::debug!("java.lang.String::compareTo({this:?}, {other:?})");
 
+            if other.is_null() {
+                return Err(jvm.exception("java/lang/NullPointerException", "compareTo argument is null").await);
+        }
         let other_string = JavaLangString::to_rust_string(jvm, &other).await?;
         let this_string = JavaLangString::to_rust_string(jvm, &this).await?;
 
