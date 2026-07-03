@@ -72,6 +72,7 @@ impl File {
 
         let path = jvm.invoke_virtual(&this, "getPath", "()Ljava/lang/String;", ()).await?;
         let path = JavaLangString::to_rust_string(jvm, &path).await?;
+        tracing::warn!("File::isFile checking path: {path:?}");
 
         let stat = context.metadata(&path).await;
         if stat.is_err() {
