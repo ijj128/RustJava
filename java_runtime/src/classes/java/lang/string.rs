@@ -215,6 +215,7 @@ impl String {
         let other_string = JavaLangString::to_rust_string(jvm, &other).await?;
         let this_string = JavaLangString::to_rust_string(jvm, &this).await?;
 
+        tracing::warn!("STReq {this_string:?} == {other_string:?}");
         if this_string == other_string { Ok(true) } else { Ok(false) }
     }
 
